@@ -15,6 +15,23 @@ We took the most inspiration from Tinder because that was the most popular one. 
 
 ### Tuesday-Thursday Daily Goals:
 
+## TUESDAY:
+- Start building basic structure of dating app with Firebase as backend and next/react for UI/front-end.
+
+## WEDNESDAY:
+- continuing basic build-up
+- Work on adding bio/ setting up fake accounts
+- start on HTML and CSS of website
+
+## THURSDAY:
+- continue HTML and CSS styling
+- Setting up API for entry quiz. This will allow us to have random and different questions each time. 
+
+## FRIDAY: 
+- finalizing last touches
+- deploy to heroku
+- ask everyone to sign up
+- fix bugs
 ### Student 
 - Loveleen
 - Kenia
