@@ -1,11 +1,9 @@
-import { GeistProvider, CssBaseline } from "@geist-ui/react"
-
-function MyApp({ Component, pageProps }) {
-  return (
-    <GeistProvider>
-      <CssBaseline />
-      <Component {...pageProps} />
-    </GeistProvider>
+// import App from 'next/app'
+function MyApp(){
+  return(
+    <div className="App">
+      <h1>Git A Date</h1>
+    </div>
   )
 }
-export default MyApp
+export default MyApp;
