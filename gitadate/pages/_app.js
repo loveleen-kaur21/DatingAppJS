@@ -1,8 +1,9 @@
 // import App from 'next/app'
+import Header from "../components/Header"
 function MyApp(){
   return(
     <div className="App">
-      <h1>Git A Date</h1>
+      <Header />
     </div>
   )
 }
