@@ -10,7 +10,7 @@ function Header(){
             <IconButton>
             <AccountBoxIcon className={styles.headerIcon} fontSize="large"/>
             </IconButton>
-            <p className={styles.logo}>Get A Date</p>
+            <p className={styles.logo}>Git A Date</p>
             <IconButton>
             <QuestionAnswerIcon className={styles.headerIcon} fontSize="large"/>
             </IconButton>
