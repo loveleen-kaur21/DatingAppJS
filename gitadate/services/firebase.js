@@ -8,9 +8,15 @@ const config = {
     databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DB_URL,
     projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
 }
-
-export default function initFirebase () {
+function initFirebase () {
     if (!firebase.apps.length) {
-        firebase.initializeApp(config);
+        firebaseApp = firebase.initializeApp(config);
+        const database = firebaseApp.firestore()
     }
 }
+
+initFirebase()
+
+export default database
+
+
