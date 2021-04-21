@@ -7,8 +7,8 @@ import database from '../services/firebase'
 export default function TinderCards() {
     const [people, setPeople]= useState([
         { 
-        name: "Loveleen Kaur",
-        url: "https://media.istockphoto.com/photos/newborn-baby-girl-sleeping-in-bowl-picture-id636253690?k=6&m=636253690&s=612x612&w=0&h=JnniQUFMJe7NoXAFtJMnJQ5yuCwkbz4CHKO_G3zbsTc="
+        name: "Andy ",
+        url: "https://scontent.fjan1-1.fna.fbcdn.net/v/t1.6435-9/150180372_258549145840383_9022810183650804089_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=nubBEcicVx4AX-XEZjl&_nc_ht=scontent.fjan1-1.fna&oh=600cc908cf5c94a6524446cbdd973688&oe=60A7E451"
     },
     {
         name:"Billy ",

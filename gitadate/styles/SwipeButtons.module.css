@@ -1,10 +1,12 @@
 .swipeButtons{
     position: fixed;
-    bottom: 6vh;
+    bottom: 5vh;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 5px;
+    flex: 0 0 50px;/*or just height:50px;*/
+    margin-top: auto;
 }
 .swipeButtons__repeat{
     padding: 3vw !important;
