@@ -8,7 +8,6 @@ import TinderCard from "../components/TinderCard"
 export default function Home() {
   return (
     <div >
-      <Header className={headerStyle.header}/>
       <TinderCard />
 
     </div>
