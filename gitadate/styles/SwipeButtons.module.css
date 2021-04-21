@@ -1,0 +1,28 @@
+.swipeButtons{
+    position: fixed;
+    bottom: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+.swipeButtons__repeat{
+    padding: 3vw !important;
+    color: orange !important;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0,0,0,0.3)!important;
+}
+.swipeButtons__left{
+    padding: 3vw !important;
+    color: red !important;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0,0,0,0.3)!important;
+
+}
+.swipeButtons__right{
+    padding: 3vw !important;
+    color: rgb(90, 167, 212) !important;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0,0,0,0.3)!important;
+
+}
