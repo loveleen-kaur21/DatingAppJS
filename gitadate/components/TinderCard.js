@@ -12,6 +12,25 @@ export default function TinderCards() {
             setPeople(snapshot.docs.map(doc => doc.data()))
         })
     }, [])
+    const [people, setPeople]= useState([
+        { 
+        name: "Andy ",
+        url: "https://scontent.fjan1-1.fna.fbcdn.net/v/t1.6435-9/150180372_258549145840383_9022810183650804089_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=nubBEcicVx4AX-XEZjl&_nc_ht=scontent.fjan1-1.fna&oh=600cc908cf5c94a6524446cbdd973688&oe=60A7E451"
+    },
+    {
+        name:"Billy ",
+        url: "https://static.wikia.nocookie.net/villains/images/6/65/Billy-Hargrove-Season-3.png/revision/latest?cb=20190704212848"
+    }
+    ]);
+    
+
+    // useEffect(() => {
+    //     // runs once and never again
+    //     database.collection('people').onSnapshot(snapshot => {
+    //         setPeople(snapshot.docs.map(doc => doc.data()))
+    //     })
+    // }, [])
+>>>>>>> 74541e3e0eca964fd1a7c4d5725bf351102ab669
     return (
         <div className={tcStyle.tinderCards_cardContainer}>
             <h1>No More Matches Avaliable!</h1>
