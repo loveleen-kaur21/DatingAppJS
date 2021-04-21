@@ -26,6 +26,7 @@ export default function TinderCards() {
                     <h3>{person.name}</h3>
                     </div>
                 </TinderCard>
+
             ))}
         </div>
     )

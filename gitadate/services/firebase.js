@@ -1,22 +1,28 @@
-import firebase from 'firebase/app'
-import "firebase/auth"
-import "firebase/analytics"
+import firebase from 'firebase/app';
+import "firebase/auth";
+import "firebase/analytics";
+import "firebase/firestore";
+
+
+
 
 const config = {
-    apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,
-    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DB_URL,
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-}
-function initFirebase () {
-    if (!firebase.apps.length) {
-        firebaseApp = firebase.initializeApp(config);
-        const database = firebaseApp.firestore()
-    }
-}
+    apiKey: 'AIzaSyBUTJ6AU0Ugj859bDMNFuH_GLxCvbhZ1Sg',
+    authDomain: 'gitadate-2cdac.firebaseapp.com',
+    databaseURL: 'https://gitadate-2cdac-default-rtdb.firebaseio.com',
+    projectId: 'gitadate-2cdac'
+};
 
-initFirebase()
+let firebaseApp 
 
-export default database
+if (!firebase.apps.length) {
+    firebaseApp = firebase.initializeApp(config);
+ }else {
+    firebaseApp = firebase.app(); // if already initialized, use that one
+ }
 
+const database = firebase.firestore();
 
+console.log(firebaseApp);
+
+export default database;
