@@ -10,7 +10,6 @@ export default function Login(){
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
 
-    console.log(window.location.href)
 
     return(
         <div>
