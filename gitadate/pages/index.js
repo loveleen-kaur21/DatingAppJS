@@ -1,17 +1,17 @@
-import Head from 'next/head'
-import Header from "../components/Header"
-import styles from '../styles/Home.module.css'
-import headerStyle from "../styles/Header.module.css"
-import TinderCard from "../components/TinderCard"
-import tcStyle from "../styles/TinderCard.module.css"
-import SwipeButtons from '../components/SwipeButton'
-import Sbstyle from "../styles/SwipeButtons.module.css"
+import React from "react"
+import Link from "next/link"
+import {useAuth} from "../auth"
+
 
 export default function Home() {
+  const {user} = useAuth();
+
   return (
     <div >
-      <TinderCard className={tcStyle.card}/>
-      <SwipeButtons className={Sbstyle.SwipeButtons}/>
+      <h1> Welcome to Git A Date</h1>
+      <p>{`User ID : ${user ? user.uid : "No user signed in"}`}</p>
+      <button disabled={!user}><Link href="/authenticated"><a> Go to authenticated</a></Link> </button>
+      <button disabled={!user}><Link href="/login"><a> Login</a></Link> </button>
     </div>
   )
 }
