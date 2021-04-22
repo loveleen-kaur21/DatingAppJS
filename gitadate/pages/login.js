@@ -10,13 +10,17 @@ export default function Login(){
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
 
+    console.log(window.location.href)
+
     return(
         <div>
             <h2>Login</h2>
             <form action="" method="POST">
             <label htmlFor="email">Email</label>
             <input 
-                onChange={(e) => setEmail(e.target.value)} 
+                onChange={(e) => {
+                    setEmail(e.target.value);
+                    console.log(email)}} 
                 value={email} 
                 id="email" 
                 type="email" 
@@ -30,8 +34,11 @@ export default function Login(){
             <button 
                 disabled={email === "" || pass === ""} 
                 onClick={async () => {
+                    console.log("gujhj")
                     await firebase.auth().createUserWithEmailAndPassword(email, pass)
-                        .then(function() {
+                    console.log("does it work")
+                        .then( () => {
+                            console.log("klghfgfjhghgjhr")
                         window.location.href = "/"
                     }).catch(function (error) {
                         const message = error.message;
@@ -49,11 +56,11 @@ export default function Login(){
             <button 
                 disabled={email === "" || pass === ""}
                 onClick={async () => {
+                    console.log(window.location.href)
                     await firebase
-                    .auth()
-                    .signInWithEmailAndPassword(email, pass)
-                        .then(function() {
-                        window.location.href = "/tinder.js"
+                    .auth().signInWithEmailAndPassword(email, pass)
+                        .then(() => {
+                        window.location.href = "http://localhost:3000/tinder"
                     }).catch(function (error) {
                         const message = error.message;
                         console.log(message)
