@@ -5,6 +5,13 @@ import tcStyle from "../styles/TinderCard.module.css"
 import database from '../services/firebase'
 
 export default function TinderCards() {
+    const [people, setPeople]= useState([]);
+    useEffect(() => {
+        // runs once and never again
+        database.collection('people').onSnapshot(snapshot => {
+            setPeople(snapshot.docs.map(doc => doc.data()))
+        })
+    }, [])
     const [people, setPeople]= useState([
         { 
         name: "Andy ",
@@ -23,6 +30,7 @@ export default function TinderCards() {
     //         setPeople(snapshot.docs.map(doc => doc.data()))
     //     })
     // }, [])
+>>>>>>> 74541e3e0eca964fd1a7c4d5725bf351102ab669
     return (
         <div className={tcStyle.tinderCards_cardContainer}>
             <h1>No More Matches Avaliable!</h1>
