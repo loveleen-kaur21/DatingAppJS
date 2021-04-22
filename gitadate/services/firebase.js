@@ -23,6 +23,4 @@ if (!firebase.apps.length) {
 
 const database = firebase.firestore();
 
-console.log(firebaseApp);
-
 export default database;
