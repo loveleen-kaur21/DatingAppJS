@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import firebaseClient from "../firebaseClient";
 import firebase from "firebase/app";
 import "firebase/auth";
-
+import Button from 'react-bootstrap/Button';
+import styles from "../styles/Login.module.css"
+import Link from "next/link"
 
 export default function Login(){
     firebaseClient();
@@ -10,25 +12,31 @@ export default function Login(){
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     return(
-        <div>
+        <div className={styles.center}>
             <h2>Login</h2>
             <form action="" method="POST">
-            <label htmlFor="email">Email</label>
-            <input 
-                onChange={(e) => {
-                    setEmail(e.target.value);
-                    console.log(email)}} 
-                value={email} 
-                id="email" 
-                type="email" 
-                required />
-            <label htmlFor="pass">Password</label>
-            <input 
-                onChange={(e) => setPass(e.target.value)} 
-                value={pass} 
-                id="pass" 
-                required />
-            <button 
+            <div>
+                <label htmlFor="email">Email: </label>
+                <input 
+                    onChange={(e) => {
+                        setEmail(e.target.value);
+                        console.log(email)}} 
+                    value={email} 
+                    id="email" 
+                    type="email" 
+                    required />
+            </div>
+           <div>
+            <label htmlFor="pass">Password: </label>
+                <input 
+                    onChange={(e) => setPass(e.target.value)} 
+                    value={pass} 
+                    id="pass" 
+                    required />
+           </div>
+           
+            <Button 
+                variant="warning"
                 disabled={email === "" || pass === ""} 
                 onClick={async () => {
                     console.log("gujhj")
@@ -48,18 +56,21 @@ export default function Login(){
                         //     isClosable: true,
                         // })
                     })}}
-                >Create </button>
+                >Create </Button>
 
-            <button 
+            <Button 
+                variant="primary"
                 disabled={email === "" || pass === ""}
-                onClick={async () => {
+                onClick={() => {
                     console.log(window.location.href)
-                    await firebase.auth().signInWithEmailAndPassword(email, pass)
-                        .then(() => {
-                        window.location.href = "http://localhost:3000/tinder"
-                    }).catch(function (error) {
-                        const message = error.message;
-                        console.log(message)
+                    firebase.auth().signInWithEmailAndPassword(email, pass)
+                    //     .then(() => {
+                    //     window.location.href = "http://localhost:3000/tinder"
+                    // }).catch(function (error) {
+                    //     const message = error.message;
+                    //     console.log(message)
+
+
                         // toast({
                         //     title:"An error occurred",
                         //     description: message,
@@ -67,8 +78,8 @@ export default function Login(){
                         //     duration: 9000,
                         //     isClosable: true,
                         // })
-                    })}}
-            >Sign in </button>
+                    }}
+            ><Link href="http://localhost:3000/tinder"><a>Sign In</a></Link></Button>
             </form>
         </div>
         
