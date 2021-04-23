@@ -29,7 +29,11 @@ export default function Login(){
            <div>
             <label htmlFor="pass">Password: </label>
                 <input 
-                    onChange={(e) => setPass(e.target.value)} 
+                    onChange={(e) => {
+                        e.preventDefault()
+                        setPass(e.target.value)
+                    }
+                        } 
                     value={pass} 
                     id="pass" 
                     required />
@@ -38,10 +42,10 @@ export default function Login(){
             <Button 
                 variant="warning"
                 disabled={email === "" || pass === ""} 
-                onClick={async () => {
+                onClick={async (e) => {
+                    e.preventDefault();
                     console.log("gujhj")
                     await firebase.auth().createUserWithEmailAndPassword(email, pass)
-                    console.log("does it work")
                         .then( () => {
                             console.log("klghfgfjhghgjhr")
                         window.location.href = "/"
@@ -61,25 +65,20 @@ export default function Login(){
             <Button 
                 variant="primary"
                 disabled={email === "" || pass === ""}
-                onClick={() => {
+                onClick={(e) => {
+                    e.preventDefault();
                     console.log(window.location.href)
                     firebase.auth().signInWithEmailAndPassword(email, pass)
-                    //     .then(() => {
-                    //     window.location.href = "http://localhost:3000/tinder"
-                    // }).catch(function (error) {
-                    //     const message = error.message;
-                    //     console.log(message)
-
-
-                        // toast({
-                        //     title:"An error occurred",
-                        //     description: message,
-                        //     status: 'error',
-                        //     duration: 9000,
-                        //     isClosable: true,
-                        // })
-                    }}
-            ><Link href="http://localhost:3000/tinder"><a>Sign In</a></Link></Button>
+                        .then(() => {
+                        window.location.href = "http://localhost:3000/tinder"
+                    }).catch(function (error) {
+                        const message = error.message;
+                        console.log(message)
+                    })}}
+                    
+            >
+            Sign In
+            </Button>
             </form>
         </div>
         
