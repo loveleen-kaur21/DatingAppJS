@@ -2,6 +2,8 @@ import React from "react"
 import Link from "next/link"
 import {useAuth} from "../auth"
 import style from "../styles/Home.module.css"
+import firebase from "firebase/app"
+import "firebase/auth"
 
 export default function Home() {
   const {user} = useAuth();
