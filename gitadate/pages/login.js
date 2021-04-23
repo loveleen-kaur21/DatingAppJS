@@ -9,8 +9,6 @@ export default function Login(){
     // const toast = useToast();
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
-
-
     return(
         <div>
             <h2>Login</h2>
@@ -56,8 +54,7 @@ export default function Login(){
                 disabled={email === "" || pass === ""}
                 onClick={async () => {
                     console.log(window.location.href)
-                    await firebase
-                    .auth().signInWithEmailAndPassword(email, pass)
+                    await firebase.auth().signInWithEmailAndPassword(email, pass)
                         .then(() => {
                         window.location.href = "http://localhost:3000/tinder"
                     }).catch(function (error) {

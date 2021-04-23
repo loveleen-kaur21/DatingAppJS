@@ -1,8 +1,8 @@
-// import firebase from 'firebase/app';
-// import "firebase/auth";
-// import "firebase/analytics";
-// import "firebase/firestore";
-
+import firebase from 'firebase/app';
+import "firebase/auth";
+import "firebase/analytics";
+import "firebase/firestore";
+import firebaseClient from '../firebaseClient'
 
 
 
@@ -15,15 +15,14 @@
 //     messagingSenderId: '438007955305',
 //     appId: '1:438007955305:web:055731955875d4ec51c7f8',
 // };
-
 // let firebaseApp 
-
 // if (!firebase.apps.length) {
 //     firebaseApp = firebase.initializeApp(config);
 //  }else {
-//     firebaseApp = firebase.app(); // if already initialized, use that one
+// firebaseApp = firebase.app(); // if already initialized, use that one
 //  }
 
-// const database = firebase.firestore();
+firebaseClient()
+const database = firebase.firestore();
 
-// export default database;
+export default database;

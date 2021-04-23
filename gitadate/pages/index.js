@@ -11,6 +11,7 @@ export default function Home() {
       <h1 > Welcome to Git A Date</h1>
       <p>{`${user ? user.uid : "Please Login or Sign up to get started!"}`}</p>
       <button disabled={!user}><Link href="/login"><a> Login</a></Link> </button>
+      <button disabled={!user}><Link href="/authenticated"><a> Go to authenticated</a></Link> </button>
     </div>
   )
 }
