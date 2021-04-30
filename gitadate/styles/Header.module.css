@@ -2,6 +2,8 @@
   color: red;
   font-size: 30px;
   font-weight: bold;
+  text-decoration: none;
+  outline: none;
 }
 .header {
   display: flex;
@@ -12,4 +14,6 @@
 
 .headerIcon {
   padding: 20px;
+  text-decoration: none;
+  color: inherit;
 }

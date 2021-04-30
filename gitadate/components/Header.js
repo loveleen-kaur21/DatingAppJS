@@ -8,9 +8,9 @@ function Header(){
     return (
         <div className={styles.header}>
             <IconButton>
-            <AccountBoxIcon className={styles.headerIcon} fontSize="large"/>
+            <a href="/account"><AccountBoxIcon className={styles.headerIcon} fontSize="large"/></a>
             </IconButton>
-            <p className={styles.logo}>Git A Date</p>
+            <a href="/tinder"><p className={styles.logo}>Git A Date</p></a>
             <IconButton>
             <QuestionAnswerIcon className={styles.headerIcon} fontSize="large"/>
             </IconButton>
