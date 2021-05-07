@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div className={style.container}>
-      <h1 > Welcome to Git A Date</h1>
+      <h1> Welcome to Git A Date</h1>
       <p>{`${user ? "Start Matching": "Please Login or Sign up to get started!"}`}</p>
       <button disabled={!user}><Link href="/login"><a> Login</a></Link> </button>
       <LogoutButton />

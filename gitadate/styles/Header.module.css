@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 .logo {
   color: red;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   text-decoration: none;
   outline: none;
+  font-family: 'Bebas Neue', cursive;;
 }
 .header {
   display: flex;

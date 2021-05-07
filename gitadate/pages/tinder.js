@@ -10,14 +10,13 @@ import {useAuth} from "../auth"
 import firebase from "firebase/app"
 import "firebase/auth"
 import Link from 'next/link'
+import PleaseLogin from "../components/PleaseLogin"
 
 export default function Home() {
   const {user} = useAuth();
   return (
     <div>
-      <div>{ user ? <TinderCard className={tcStyle.card}/> :  <Link href="/login">
-          <a>Please Login to view possible matches :)</a>
-        </Link>} </div>
+      <div>{ user ? <TinderCard className={tcStyle.card}/> :  <PleaseLogin />} </div>
     </div>
   )
 
