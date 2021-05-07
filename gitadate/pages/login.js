@@ -3,7 +3,7 @@ import firebaseClient from "../firebaseClient";
 import firebase from "firebase/app";
 import "firebase/auth";
 // import Button from 'react-bootstrap/Button';
-import styles from "../styles/Login.module.css"
+import PleaseStyle from "../styles/PleaseLogin.module.css"
 import Link from "next/link"
 
 export default function Login(){
@@ -12,7 +12,7 @@ export default function Login(){
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     return(
-        <div className={styles.center}>
+        <div className={PleaseStyle.style}>
             <h2>Login</h2>
             <form action="" method="POST">
             <div>
