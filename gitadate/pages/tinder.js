@@ -6,13 +6,23 @@ import TinderCard from "../components/TinderCard"
 import tcStyle from "../styles/TinderCard.module.css"
 import SwipeButtons from '../components/SwipeButton'
 import Sbstyle from "../styles/SwipeButtons.module.css"
+import {useAuth} from "../auth"
+import firebase from "firebase/app"
+import "firebase/auth"
+import Link from 'next/link'
 
 export default function Home() {
-
+  const {user} = useAuth();
   return (
-    <div >
-      <TinderCard className={tcStyle.card}/>
-      <SwipeButtons className={Sbstyle.SwipeButtons}/>
+    <div>
+      <div>{ user ? <TinderCard className={tcStyle.card}/> :  <Link href="/login">
+          <a>Please Login to view possible matches :)</a>
+        </Link>} </div>
     </div>
   )
+
 }
+
+  
+ 
+

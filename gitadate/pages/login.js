@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import firebaseClient from "../firebaseClient";
 import firebase from "firebase/app";
 import "firebase/auth";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import styles from "../styles/Login.module.css"
 import Link from "next/link"
 
@@ -39,7 +39,7 @@ export default function Login(){
                     required />
            </div>
            
-            <Button 
+            <button 
                 variant="warning"
                 disabled={email === "" || pass === ""} 
                 onClick={async (e) => {
@@ -60,9 +60,9 @@ export default function Login(){
                         //     isClosable: true,
                         // })
                     })}}
-                >Create </Button>
+                >Create </button>
 
-            <Button 
+            <button 
                 variant="primary"
                 disabled={email === "" || pass === ""}
                 onClick={(e) => {
@@ -78,7 +78,7 @@ export default function Login(){
                     
             >
             Sign In
-            </Button>
+            </button>
             </form>
         </div>
         
