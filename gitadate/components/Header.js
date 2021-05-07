@@ -13,7 +13,7 @@ function Header(){
             </IconButton>
             <a href="/tinder"><p className={styles.logo}>Git A Date</p></a>
             <IconButton>
-            <QuestionAnswerIcon className={styles.headerIcon} fontSize="large"/>
+            <a href="/chat"><QuestionAnswerIcon className={styles.headerIcon} fontSize="large"/></a>
             </IconButton>
         </div>
     )
